@@ -1,3 +1,7 @@
+- if @error
+	#error_explanation
+		ul
+			li = "There was an error while parsing the email, plz fix and resubmit"
 = simple_form_for :lead, url: leads_path, method: :post do |f|
 	= f.text_area :body, cols: 40, rows: 20
 	= f.submit 'Submit'

@@ -21,6 +21,6 @@ class LeadParser
 		#  "to_areacode"=>"510", "to_zip"=>"94619", "to_state"=>"CA", "to_city"=>"Oakland", 
 		#  "bedrooms"=>"2", "distance"=>"19", "move_date"=>"2017-11-11"}
 
-		Customer.create(data)
+		Customer.create!(data)
 	end
 end

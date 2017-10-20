@@ -1,10 +1,22 @@
-= simple_form_for @customer do |f|
+ = simple_form_for(@customer, html: { class: 'form-horizontal' }) do |f|
   - if @customer.errors.any?
     #error_explanation
       h2 = "#{pluralize(@customer.errors.count, "error")} prohibited this customer from being saved:"
       ul
         - @customer.errors.full_messages.each do |message|
           li = message
-
   = f.input :name
+  = f.input :email
+  = f.input :phone
+  = f.input :from_areacode
+  = f.input :from_zip
+  = f.input :from_state
+  = f.input :from_city
+  = f.input :to_areacode
+  = f.input :to_zip
+  = f.input :to_state
+  = f.input :to_city
+  = f.input :bedrooms, type: :number
+  = f.input :distance, type: :number
+  = f.input :move_date, type: :date, html5: true
   .actions = f.submit

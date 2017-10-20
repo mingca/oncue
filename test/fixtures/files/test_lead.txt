@@ -1,0 +1,24 @@
+---
+Lead INFO
+
+Name : Vineet Thanedar
+Email : vineet@oncue.co
+Phone : (415) 888-8888
+EXT :
+
+From:
+From Areacode : 415
+From Zip : 94123
+From State : CA
+From City : San Francisco
+
+To:
+To Areacode : 510
+To Zip : 94619
+To State : CA
+To City : Oakland
+
+Bedrooms : 2
+Distance : 19
+Move Date : 2017-11-11
+---

@@ -5,6 +5,9 @@ class LeadsController < ApplicationController
 	end
 
 	def create
-		redirect_to root_path
+		parser = LeadParser.new params[:lead][:body]
+		redirect_to parser.parse
+	# rescue
+	# 	redirect_to root_path
 	end
 end

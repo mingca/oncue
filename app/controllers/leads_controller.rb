@@ -11,7 +11,9 @@ class LeadsController < ApplicationController
 
 	def create
 		parser = LeadParser.new params[:lead][:body]
-		redirect_to parser.parse
+		customer = parser.parse
+		flash[:notice] = 'Successfully Created Customer!'
+		redirect_to customer
 	rescue
 		@error = true
 		render :new

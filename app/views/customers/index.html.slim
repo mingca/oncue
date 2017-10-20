@@ -1,6 +1,6 @@
 h1 Listing customers
 
-table
+table.table-striped.table-bordered
   thead
     tr
       - (Customer.column_names - ["id", "created_at", "updated_at"]).each do |column|

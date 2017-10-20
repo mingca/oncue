@@ -1,5 +1,13 @@
 p#notice = notice
-
+table.table-striped.table-bordered
+  thead
+    tr
+      - (Customer.column_names - ["id", "created_at", "updated_at"]).each do |column|
+          th = column.titleize
+  tbody
+    tr
+      - @customer.attributes.except("id", "created_at", "updated_at").each do |column|
+        td = column.second
 
 => link_to 'Edit', edit_customer_path(@customer)
 '|
